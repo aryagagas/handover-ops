@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Handover Ops</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <!-- Halaman login (LDAP + authenticator), diisi oleh app.js -->
+  <div id="auth" class="auth" hidden></div>
+
+  <!-- Header navy: menu, pilihan HP, akun, dan judul halaman -->
+  <div class="band">
+    <div class="wrap"><header class="top" id="top"></header></div>
+    <div class="wrap band-in" id="band-in"></div>
+  </div>
+
+  <!-- Isi halaman: Serah terima, Issue, Maintenance, Laporan, Riwayat, Admin -->
+  <main class="wrap main" id="view"></main>
+
+  <div class="wrap app-foot">
+    <div class="foot">
+      <span>Prototype. Login dan authenticator disimulasikan, data cuma tersimpan di browser ini. Jam memakai waktu demo dan maju 2 menit setiap ada aksi.</span>
+      <button id="reset-btn" data-act="reset">Reset data contoh</button>
+    </div>
+  </div>
+
+  <!-- Menu bawah (layar HP), drawer detail, dan notifikasi -->
+  <nav class="bnav" id="bnav" aria-label="Menu"></nav>
+  <dialog id="dlg" class="drawer"></dialog>
+  <div class="toast" id="toast" hidden></div>
+
+  <!-- QR code untuk pendaftaran authenticator -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <!-- Mode online (opsional): library Supabase + URL/key di config.js. Kalau config.js kosong, app jalan lokal. -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.50.0/dist/umd/supabase.min.js"></script>
+  <script src="assets/config.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

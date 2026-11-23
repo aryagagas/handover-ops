@@ -37,6 +37,7 @@
   --soft-pct:18%; color-scheme:dark;
 }
 *{box-sizing:border-box}
+html,body{margin:0}
 body{background:var(--bg);color:var(--ink);font-family:var(--f);font-size:14.5px;line-height:1.55;-webkit-font-smoothing:antialiased;
   --accent:var(--ua);--accent-soft:color-mix(in srgb,var(--accent) var(--soft-pct),var(--surface));--accent-lite:color-mix(in srgb,var(--accent) 65%,#fff)}
 body.desk-AB{--accent:var(--ab)}
